@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://imagens projeto corona/fund.png" type="Texture2D" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2( 527.29, 302.894 )
+scale = Vector2( 1.55994, 1.60329 )
+texture = ExtResource( 1 )

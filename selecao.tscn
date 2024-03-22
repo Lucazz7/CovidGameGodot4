@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imagens projeto corona/PNG-Setadourada.png" type="Texture2D" id=1]
+[ext_resource path="res://Imagem menu/SELECAO DE PERSONAGEM CERTO.jpg" type="Texture2D" id=2]
+[ext_resource path="res://selecao.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="players" type="Sprite2D" parent="."]
+position = Vector2( 512.318, 299.387 )
+scale = Vector2( 0.796596, 0.939694 )
+texture = ExtResource( 2 )
+
+[node name="seta" type="Sprite2D" parent="."]
+position = Vector2( 130.663, 522.126 )
+scale = Vector2( 0.6, 0.464304 )
+texture = ExtResource( 1 )

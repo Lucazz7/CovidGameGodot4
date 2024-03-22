@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://imagens projeto corona/pngguru.com (5).png" type="Texture2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37.2559, 36.1995 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2( -1.42499, 1.425 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 915, 819, 176, 176 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -3.78252, 4.32288 )
+shape = SubResource( 1 )

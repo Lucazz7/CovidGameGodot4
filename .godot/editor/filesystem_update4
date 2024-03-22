@@ -1,0 +1,5 @@
+res://default_env.tres
+res://menu.tscn
+res://selecao.gd
+res://Player.gd
+res://Passagem.gd

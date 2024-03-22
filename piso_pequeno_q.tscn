@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imagens projeto corona/pngguru.com (5).png" type="Texture2D" id=1]
+[ext_resource path="res://piso_mov.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28.4499, 29.5464 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 920, 834, 160, 155 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )

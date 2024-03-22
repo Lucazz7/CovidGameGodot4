@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://imagens projeto corona/corona virus.png" type="Texture2D" id=1]
+[ext_resource path="res://corona_voando.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.6589
+
+[sub_resource type="Animation" id=2]
+length = 1.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 38, 3, 114, 144 ), Rect2( 213, 8, 123, 136 ), Rect2( 404, 15, 112, 129 ), Rect2( 562, 20, 141, 122 ), Rect2( 733, 51, 174, 88 ), Rect2( 41, 219, 128, 113 ), Rect2( 234, 218, 105, 119 ), Rect2( 418, 219, 99, 111 ), Rect2( 599, 221, 97, 100 ), Rect2( 782, 222, 99, 104 ), Rect2( 53, 395, 98, 101 ), Rect2( 222, 396, 118, 100 ), Rect2( 380, 397, 160, 90 ), Rect2( 556, 373, 154, 113 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14.8166, 16.3707 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2.26218, 4.23229 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+script = ExtResource( 2 )
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 38, 3, 114, 144 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D/Sprite2D"]
+anims/voando = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1.53754, 3.07681 )
+shape = SubResource( 3 )
+[connection signal="area_entered" from="Area2D" to="StaticBody2D" method="_on_Area2D_area_entered"]

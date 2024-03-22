@@ -1,0 +1,703 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://players_certo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://imagens projeto corona/backgrou.png" type="Texture2D" id=2]
+[ext_resource path="res://piso_p_e.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Passagem.tscn" type="PackedScene" id=4]
+[ext_resource path="res://corona_voando.tscn" type="PackedScene" id=5]
+[ext_resource path="res://piso.tscn" type="PackedScene" id=6]
+[ext_resource path="res://piso_p_d.tscn" type="PackedScene" id=7]
+[ext_resource path="res://piso_pequeno_q.tscn" type="PackedScene" id=8]
+[ext_resource path="res://lixo_toxico.tscn" type="PackedScene" id=9]
+[ext_resource path="res://casa.tscn" type="PackedScene" id=10]
+[ext_resource path="res://queda_cena1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://mostro.tscn" type="PackedScene" id=12]
+[ext_resource path="res://pilula.tscn" type="PackedScene" id=13]
+[ext_resource path="res://remedio1.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 79.5582, 491.082 )
+
+[node name="word" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="fundo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1528, 280 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2482.91, 280 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3464, 277.965 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 4436.07, 277.965 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 5464, 277.965 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 6376, 277.965 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo24" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1520.7, -143.178 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo23" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2475.61, -143.178 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo22" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3456.7, -145.213 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo21" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 4428.77, -145.213 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo20" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 5456.7, -145.213 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo19" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 6368.7, -145.213 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -496, 776 )
+scale = Vector2( 1.66357, 1.34796 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 7320, 465.366 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+offset = Vector2( -33.6626, -141.499 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 504, 280 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo18" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 7312.7, 42.1874 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+offset = Vector2( -33.6626, -141.499 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 496.697, -143.178 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo16" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1536, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo17" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 503.089, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo15" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2488, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo14" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3470.76, 778.359 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo13" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 4456, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo12" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 5464, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo11" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 6344, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo10" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -496, 287.189 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo25" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -500, -144 )
+scale = Vector2( 1.65079, 1.3244 )
+texture = ExtResource( 2 )
+flip_v = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fundo9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 7264, 776 )
+scale = Vector2( 1.66357, 1.3244 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Passagem" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5429.2, 417.013 )
+rotation = 0.0118405
+scale = Vector2( 1.15899, 1.53689 )
+cenas = "Cena2.tscn"
+
+[node name="pisos" parent="." instance=ExtResource( 6 )]
+position = Vector2( -165.891, 650.822 )
+
+[node name="pisos2" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 590.256, 0.020813 )
+
+[node name="pisos36" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 2667.17, -2.44525 )
+
+[node name="pisos46" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 5349.86, -10.886 )
+
+[node name="pisos47" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 5598.13, -10.886 )
+
+[node name="pisos48" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 5412.17, -75.0992 )
+
+[node name="pisos49" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 5561.87, -86.2029 )
+
+[node name="pisos50" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 5447.5, -130.835 )
+
+[node name="pisos51" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 5600.92, -130.835 )
+
+[node name="pisos38" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 2830.09, -292.806 )
+
+[node name="pisos39" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 292.844, 0.0677941 )
+
+[node name="pisos40" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3233.55, 1.39575 )
+
+[node name="pisos44" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 2958.38, -1.45313 )
+
+[node name="pisos41" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 2830.43, -453.033 )
+
+[node name="pisos9" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 892.269, 0.00946051 )
+
+[node name="pisos28" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 1677.35, -135.385 )
+
+[node name="pisos34" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 1673.15, -1.22809 )
+
+[node name="pisos10" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 1373.34, -1.28711 )
+
+[node name="pisos15" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 1976.53, -1.8811 )
+
+[node name="pisos16" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 4664.52, -11.1466 )
+
+[node name="pisos30" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3271.75, -320.533 )
+
+[node name="pisos31" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3517.76, -240.649 )
+
+[node name="pisos32" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3778.84, -144.396 )
+
+[node name="pisos35" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3544.68, -131.429 )
+
+[node name="pisos37" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3541.09, -1.0816 )
+
+[node name="pisos42" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 4013.34, -66.623 )
+
+[node name="pisos43" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 4373.6, -11.2171 )
+
+[node name="pisos45" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 4084.77, -11.2173 )
+
+[node name="pisos33" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3810.07, -7.65851 )
+
+[node name="pisos29" parent="pisos" instance=ExtResource( 6 )]
+position = Vector2( 3268.38, -161.244 )
+
+[node name="Node2D2" parent="pisos" instance=ExtResource( 8 )]
+position = Vector2( 2163.26, -62.549 )
+
+[node name="Node2D" parent="pisos" instance=ExtResource( 3 )]
+position = Vector2( 2995.36, -336.397 )
+
+[node name="Node2D3" parent="pisos" instance=ExtResource( 3 )]
+position = Vector2( 3003.02, -514.739 )
+
+[node name="piso_pequeno_d" parent="pisos" instance=ExtResource( 7 )]
+position = Vector2( 3094.63, -206.664 )
+
+[node name="Node2D4" parent="pisos" instance=ExtResource( 8 )]
+position = Vector2( 4851.39, -71.235 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 2797.69, 656.614 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -2888.42, -184.759 )
+shape = SubResource( 1 )
+
+[node name="casa" parent="." instance=ExtResource( 10 )]
+position = Vector2( 40.33, 463.038 )
+
+[node name="lixo" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 1230.72, 76.7746 )
+
+[node name="lixo8" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 1646.12, 73.2121 )
+
+[node name="lixo2" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 2887.69, 74.8093 )
+
+[node name="lixo7" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 2583.85, 75.6762 )
+
+[node name="lixo3" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 2756.6, -377.059 )
+
+[node name="lixo4" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 3240.82, -162.673 )
+z_index = 102
+
+[node name="lixo5" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 5246.23, -54.4958 )
+
+[node name="lixo6" parent="casa" instance=ExtResource( 9 )]
+position = Vector2( 5528.19, -53.6715 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 410.173 )
+
+[node name="inimigos" type="Node2D" parent="."]
+
+[node name="corona_voando1" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 2168, 471.855 )
+
+[node name="corona_voando4" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 2680.78, 496.74 )
+
+[node name="corona_voando5" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 2974.75, 148.716 )
+
+[node name="corona_voando6" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 3539.94, 310.695 )
+
+[node name="corona_voando7" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 3793.74, 424.248 )
+
+[node name="corona_voando8" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 4128, 511.12 )
+rotation = 6.28319
+
+[node name="corona_voando9" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 4664, 499.573 )
+
+[node name="corona_voando10" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 4352, 408 )
+
+[node name="corona_voando11" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 5127.85, 334.9 )
+
+[node name="corona_voando2" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 973.619, 462.997 )
+
+[node name="corona_voando3" parent="inimigos" instance=ExtResource( 5 )]
+position = Vector2( 1388.31, 358.681 )
+
+[node name="Node2D" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3136, 808 )
+
+[node name="mostro" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4369.1, 519.987 )
+
+[node name="mostro2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3533.76, 394.313 )
+
+[node name="moedas" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="moeda" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 439.401, 535.799 )
+
+[node name="moeda2" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 470.582, 535.799 )
+
+[node name="moeda3" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 503.089, 535.799 )
+
+[node name="moeda4" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 533.607, 535.799 )
+
+[node name="moeda5" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 562.696, 536.578 )
+
+[node name="moeda6" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 595.668, 537.413 )
+
+[node name="moeda12" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 628.884, 537.604 )
+
+[node name="moeda11" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 660.065, 537.604 )
+
+[node name="moeda10" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 692.572, 537.604 )
+
+[node name="moeda9" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 723.09, 537.604 )
+
+[node name="moeda8" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 752.179, 538.383 )
+
+[node name="moeda7" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 785.151, 539.218 )
+
+[node name="moeda18" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1076.74, 537.604 )
+
+[node name="moeda17" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1107.92, 537.604 )
+
+[node name="moeda16" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1140.43, 537.604 )
+
+[node name="moeda15" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1170.95, 537.604 )
+
+[node name="moeda14" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1200.04, 538.383 )
+
+[node name="moeda13" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1236.06, 539.218 )
+
+[node name="moeda25" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1782.09, 535.846 )
+
+[node name="moeda24" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1813.27, 535.846 )
+
+[node name="moeda23" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1845.77, 535.846 )
+
+[node name="moeda22" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1876.29, 535.846 )
+
+[node name="moeda21" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1905.38, 536.625 )
+
+[node name="moeda20" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1941.41, 537.46 )
+
+[node name="moeda31" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2381.66, 539.641 )
+
+[node name="moeda30" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2412.84, 539.641 )
+
+[node name="moeda29" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2445.35, 539.641 )
+
+[node name="moeda28" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2475.87, 539.641 )
+
+[node name="moeda27" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2504.96, 540.419 )
+
+[node name="moeda26" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2540.98, 541.255 )
+
+[node name="moeda44" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2562.95, 502.484 )
+
+[node name="moeda45" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2613.35, 489.56 )
+
+[node name="moeda46" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2657.29, 493.437 )
+
+[node name="moeda47" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2668.93, 516.7 )
+
+[node name="moeda37" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2689.11, 538.28 )
+
+[node name="moeda36" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2720.29, 538.28 )
+
+[node name="moeda35" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2752.79, 538.28 )
+
+[node name="moeda34" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2783.31, 538.28 )
+
+[node name="moeda33" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2812.4, 539.059 )
+
+[node name="moeda32" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2848.43, 539.894 )
+
+[node name="moeda43" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2689.11, 538.28 )
+
+[node name="moeda42" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2720.29, 538.28 )
+
+[node name="moeda41" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2752.79, 538.28 )
+
+[node name="moeda40" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2783.31, 538.28 )
+
+[node name="moeda39" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2812.4, 539.059 )
+
+[node name="moeda38" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2848.43, 539.894 )
+
+[node name="moeda48" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2843.88, 277.965 )
+
+[node name="moeda49" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2840.12, 103.698 )
+
+[node name="moeda50" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2752.32, 90.9546 )
+
+[node name="moeda56" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2752.32, 90.9546 )
+
+[node name="moeda57" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2686.95, 89.8466 )
+
+[node name="moeda58" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2715.76, 89.8466 )
+
+[node name="moeda51" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2647.13, 89.0066 )
+
+[node name="moeda52" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2610.12, 89.0066 )
+
+[node name="moeda65" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3638.52, 402.216 )
+
+[node name="moeda66" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3585.73, 402.216 )
+
+[node name="moeda67" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3704.82, 403.444 )
+
+[node name="moeda64" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3465.2, 309.545 )
+
+[node name="moeda63" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3210.95, 225.544 )
+
+[node name="moeda70" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 5248, 416 )
+
+[node name="moeda62" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3406.27, 308.946 )
+
+[node name="moeda61" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3343.52, 308.705 )
+
+[node name="moeda53" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2573.1, 89.0066 )
+
+[node name="moeda54" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2573.1, 87.4199 )
+
+[node name="moeda55" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 2546.13, 87.4199 )
+
+[node name="moeda60" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3124.54, 225.41 )
+
+[node name="moeda59" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 3034.76, 224.407 )
+
+[node name="moeda69" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 5221.78, 416.531 )
+
+[node name="moeda68" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 5188.51, 416.636 )
+
+[node name="moeda71" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 5150.83, 414.42 )
+
+[node name="moeda74" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4688.08, 536.514 )
+
+[node name="moeda75" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4509.33, 531.479 )
+
+[node name="moeda76" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4448.91, 531.479 )
+
+[node name="moeda77" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4414.02, 530.187 )
+
+[node name="moeda78" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4478.64, 530.187 )
+
+[node name="moeda79" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4313.22, 527.602 )
+
+[node name="moeda80" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4284.78, 526.31 )
+
+[node name="moeda81" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4248.6, 526.31 )
+
+[node name="moeda82" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4207.24, 526.31 )
+
+[node name="moeda83" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 4207.24, 526.31 )
+
+[node name="moeda72" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 5104.3, 474.253 )
+
+[node name="moeda73" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 5072, 537.411 )
+
+[node name="moeda19" parent="moedas" instance=ExtResource( 13 )]
+position = Vector2( 1271.26, 507.631 )
+
+[node name="Node2D" parent="moedas" instance=ExtResource( 14 )]
+position = Vector2( 2544, 80 )

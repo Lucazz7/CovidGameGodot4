@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://imagens projeto corona/personagem333 com mascara22.png" type="Texture2D" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=9]
+resource_name = "jump"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 450, 23, 101, 121 ), Rect2( 593, 21, 67, 123 ), Rect2( 714, 22, 59, 122 ), Rect2( 807, 22, 78, 121 ), Rect2( 1, 22, 97, 122 ), Rect2( 134, 22, 77, 122 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "parado"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
+"update": 1,
+"values": [ Rect2( 372, 296, 43, 134 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "run"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 1, 22, 97, 122 ), Rect2( 134, 22, 77, 122 ), Rect2( 242, 23, 81, 120 ), Rect2( 346, 23, 89, 120 ), Rect2( 450, 23, 101, 121 ), Rect2( 593, 21, 67, 123 ), Rect2( 714, 22, 59, 122 ), Rect2( 807, 22, 78, 121 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 17.3789, 29.3243 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 17.0253, 2.52246 )
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 19.2625
+height = 39.4461
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2( 383.17, 439.056 )
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -0.434845, 0.667236 )
+current = true
+zoom = Vector2( 0.7, 0.7 )
+limit_smoothed = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( -0.10318, -0.0351868 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 372, 296, 43, 134 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+autoplay = "parado"
+anims/jump = SubResource( 9 )
+anims/parado = SubResource( 8 )
+anims/run = SubResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.593381, 4.66678 )
+shape = SubResource( 4 )
+
+[node name="pes" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="shape" type="CollisionShape2D" parent="pes"]
+position = Vector2( -0.685909, 33.2552 )
+shape = SubResource( 5 )
+
+[node name="dano" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dano"]
+position = Vector2( 0.154755, 3.40356 )
+shape = SubResource( 6 )
+[connection signal="body_entered" from="pes" to="." method="_on_pes_body_entered"]
+[connection signal="body_entered" from="dano" to="." method="_on_dano_body_entered"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://imagens projeto corona/aaaa.png" type="Texture2D" id=1]
+[ext_resource path="res://mostro.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "walk"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 2, 42, 138, 316 ), Rect2( 163, 44, 135, 314 ), Rect2( 322, 43, 135, 315 ), Rect2( 482, 46, 135, 312 ), Rect2( 642, 47, 144, 311 ), Rect2( 804, 49, 155, 310 ), Rect2( 963, 45, 153, 313 ), Rect2( 1123, 44, 137, 315 ), Rect2( 1283, 45, 135, 314 ), Rect2( 1443, 48, 135, 310 ), Rect2( 1602, 53, 135, 305 ), Rect2( 1762, 47, 137, 312 ) ]
+}
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 24.8615
+height = 9.06614
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.3575, 27.6461 )
+
+[node name="mostro" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource( 11 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( -0.0894833, -0.427825 )
+scale = Vector2( 0.272163, 0.196023 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 2, 42, 138, 316 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+autoplay = "walk"
+anims/walk = SubResource( 1 )
+
+[node name="Shape3D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.287359, 0.141154 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

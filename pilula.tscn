@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://pilula_moeda1.png" type="Texture2D" id=1]
+[ext_resource path="res://moeda_script.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.0307
+height = 18.3091
+
+[node name="Node2D" type="Node2D"]
+
+[node name="moeda" type="Area2D" parent="."]
+collision_layer = 5
+script = ExtResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="moeda"]
+light_mask = 5
+position = Vector2( 2.25935, -2.48528 )
+rotation = 0.709755
+shape = SubResource( 1 )
+
+[node name="Sprite2D" type="Sprite2D" parent="moeda"]
+scale = Vector2( 0.049, 0.049 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 236, 7, 529, 523 )
+[connection signal="body_entered" from="moeda" to="moeda" method="_on_moeda_body_entered"]

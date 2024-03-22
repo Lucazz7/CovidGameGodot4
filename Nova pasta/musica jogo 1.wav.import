@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://46ex6tn4x4rq"
+path="res://.godot/imported/musica jogo 1.wav-1c217371f2f036eb928216b4099df8fe.sample"
+
+[deps]
+
+source_file="res://Nova pasta/musica jogo 1.wav"
+dest_files=["res://.godot/imported/musica jogo 1.wav-1c217371f2f036eb928216b4099df8fe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

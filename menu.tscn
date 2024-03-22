@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw7oti7161xry"]
+
+[ext_resource type="FontFile" uid="uid://txck04e77hj4" path="res://HEINEKEN.TTF" id="1"]
+[ext_resource type="Script" path="res://menu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://5yyf4oaw5y0q" path="res://Imagem menu/quarentena (1).jpg" id="3"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("2")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 327.786
+offset_top = 411.81
+offset_right = -616.214
+offset_bottom = -148.19
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.14902, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.615686, 0.603922, 0.239216, 1)
+theme_override_fonts/font = SubResource("1")
+text = "START"
+flat = true
+expand_icon = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 560.011
+offset_top = 408.185
+offset_right = -386.989
+offset_bottom = -145.815
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer2"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="CenterContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.968627, 0.0666667, 0.0666667, 1)
+theme_override_fonts/font = SubResource("2")
+text = "QUIT"
+flat = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Node2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2(575.596, 323.731)
+rotation = 0.000529835
+scale = Vector2(0.898973, 1.00791)
+texture = ExtResource("3")
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CenterContainer2/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
